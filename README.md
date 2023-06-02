@@ -32,23 +32,42 @@
 > - `InputMismatchException` 발생 <br>
 > - `try ~ catch`를 통해 예외 처리
 
+![img_7.png](img_7.png)
+
 <br>
 
 2. 정수에 `0`을 입력했고 사칙 연산이 `/` 혹은 `%`를 입력했을 경우
 > - `checkZero`메소드 실행하여 판별 후 `ArithmeticException` 발생 <br>
 > - `try ~ catch`를 통해 예외 처리
 
+![img_5.png](img_5.png)
+
 <br>
 
 3. 사칙 연산 입력이 아닌 어떠한 다른 값을 입력했을 경우
-> - `switch`의 `default`를 통해 `InputMismatchException` 발생
+> - `switch`의 `default`를 통해 `RuntimeException` 발생
 > - `try ~ catch`를 통해 예외 처리
+
+![img_8.png](img_8.png)
+
 
 <br>
 
 ### 예외 상황에 대한 처리
 
 - `true` 값을 가진 `con` 전역 변수 생성
+```java
+    public class app1 {
+    private boolean con;
+
+    public static void main(String[] args) {
+        ...
+        
+        app.con = true;
+        
+        ...
+```
+
 - `try~catch`를 `while`로 감싼 형태의 코드로 작성하여 각각의 상황에 대처함.
 ```java
 while(con){

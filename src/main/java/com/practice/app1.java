@@ -32,7 +32,7 @@ public class app1 {
             catch (InputMismatchException e) {
                 System.out.println("------------------------");
                 System.out.println("잘못된 값이 입력되었습니다.");
-                System.out.println("정수 혹은 사칙연산(+ - * / %)을 정확히 입력해주세요.");
+                System.out.println("정수만 입력할 수 있습니다.");
                 System.out.println("다시 입력해주세요.");
                 System.out.println("------------------------");
 
@@ -42,6 +42,16 @@ public class app1 {
              catch (ArithmeticException e){
                  System.out.println("------------------------");
                  System.out.println("0으로는 나눌 수 없습니다.");
+                 System.out.println("다시 입력해주세요.");
+                 System.out.println("------------------------");
+
+                 in.nextLine();
+             }
+
+             catch (RuntimeException e){
+                 System.out.println("------------------------");
+                 System.out.println("잘못된 값이 입력되었습니다.");
+                 System.out.println("사칙연산(+ - * / %)을 정확히 입력해주세요.");
                  System.out.println("다시 입력해주세요.");
                  System.out.println("------------------------");
 
@@ -69,7 +79,7 @@ public class app1 {
                 checkZero(a,b);
                 System.out.println(a%b);
             default:
-                throw new InputMismatchException();
+                throw new RuntimeException();
         }
     }
 
