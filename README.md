@@ -75,10 +75,10 @@
 
 - `try~catch`를 `while`로 감싼 형태의 코드로 작성하여 각각의 상황에 대처함.
 ```java
-while(con){
+while(app.con){
     try{
         ...
-        con = false;
+        app.con = false;
         }
     catch(Exception e){
         ...
