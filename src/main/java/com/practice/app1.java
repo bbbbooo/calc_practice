@@ -32,6 +32,7 @@ public class app1 {
             catch (InputMismatchException e) {
                 System.out.println("------------------------");
                 System.out.println("잘못된 값이 입력되었습니다.");
+                System.out.println("정수 혹은 사칙연산(+ - * / %)을 정확히 입력해주세요.");
                 System.out.println("다시 입력해주세요.");
                 System.out.println("------------------------");
 
@@ -67,8 +68,11 @@ public class app1 {
             case '%':
                 checkZero(a,b);
                 System.out.println(a%b);
+            default:
+                throw new InputMismatchException();
         }
     }
+
 
     // a,b가 0일 경우 예외처리 하는 메소드
     private static void checkZero(int a, int b) {

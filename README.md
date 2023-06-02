@@ -30,26 +30,26 @@
 
 1. 정수 입력이 아닌 실수, 문자, 문자열을 입력했을 경우
 > - `InputMismatchException` 발생 <br>
-> - `try ~ catch`를 통해 예외처리
+> - `try ~ catch`를 통해 예외 처리
 
 <br>
 
 2. 정수에 `0`을 입력했고 사칙 연산이 `/` 혹은 `%`를 입력했을 경우
-> - `ArithmeticException` 발생 <br>
-> - `try ~ catch`를 통해 예외처리
+> - `checkZero`메소드 실행하여 판별 후 `ArithmeticException` 발생 <br>
+> - `try ~ catch`를 통해 예외 처리
 
 <br>
 
 3. 사칙 연산 입력이 아닌 어떠한 다른 값을 입력했을 경우
-> - `checkZero` 메소드를 통해 0인지 아닌지 판별함
-> - 0일 경우 `ArithmeticException` 발생
+> - `switch`의 `default`를 통해 `InputMismatchException` 발생
+> - `try ~ catch`를 통해 예외 처리
 
 <br>
 
 ### 예외 상황에 대한 처리
 
 - `true` 값을 가진 `con` 전역 변수 생성
-- `try~catch`를 `while`로 감싼 형태의 코드를 작성
+- `try~catch`를 `while`로 감싼 형태의 코드로 작성하여 각각의 상황에 대처함.
 ```java
 while(con){
     try{
